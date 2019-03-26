@@ -8,9 +8,10 @@ Function Grep-String
     [String] $Pattern,
     [String[]] $Files = "*.*",
     [Switch] $CaseSensitive,
-    [Switch] $Recursive
+    [Switch] $Recurse
   )
 
-  Get-ChildItem -Recursive:$Recursive -Include $Files | Select-String -Pattern $Pattern -CaseSensitive:$CaseSensitive
+  Get-ChildItem -Recursive:$Recurse -Include $Files | `
+    Select-String -Pattern $Pattern -CaseSensitive:$CaseSensitive
 }
 
