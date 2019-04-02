@@ -11,7 +11,7 @@ Function Grep-String
     [Switch] $Recurse
   )
 
-  Get-ChildItem -Recursive:$Recurse -Include $Files | `
+  Get-ChildItem -Recurse:$Recurse -Include $Files | `
     Select-String -Pattern $Pattern -CaseSensitive:$CaseSensitive
 }
 
