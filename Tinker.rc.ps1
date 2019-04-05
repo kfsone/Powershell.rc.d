@@ -7,7 +7,7 @@ if (! $local:DEFAULT_BASE) {
 
 Function Tinker
 {
-  [CmdletBindings(SupportsShouldProcess=$true)]
+  [CmdletBinding(SupportsShouldProcess=$true)]
   Param(
     [String] $Language = "python",
     [String] $Base     = $local:DEFAULT_BASE
